@@ -251,6 +251,9 @@ static inline NSString *cachePathForKey(NSString *key) {
         return;
     }
 
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    [[NSURLCache sharedURLCache] removeCachedResponseForRequest:request];
+
     [self removeImageForKey:keyForURL(url)];
 }
 
