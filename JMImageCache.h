@@ -37,6 +37,7 @@
 - (void) setImage:(UIImage *)i forKey:(NSString *)key;
 - (void) setImage:(UIImage *)i forURL:(NSURL *)url;
 - (void) removeImageForKey:(NSString *)key;
+- (void) removeMemoryForKey:(NSString *)key;
 - (void) removeImageForURL:(NSURL *)url;
 
 - (void) writeData:(NSData *)data toPath:(NSString *)path;

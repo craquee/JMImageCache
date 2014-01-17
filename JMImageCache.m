@@ -155,6 +155,10 @@ static inline NSString *cachePathForKey(NSString *key) {
     });
 }
 
+- (void) removeMemoryObjectForKey:(id)key {
+    [super removeObjectForKey:key];
+}
+
 #pragma mark -
 #pragma mark Getter Methods
 
@@ -245,6 +249,9 @@ static inline NSString *cachePathForKey(NSString *key) {
 }
 - (void) removeImageForKey:(NSString *)key {
 	[self removeObjectForKey:key];
+}
+- (void) removeMemoryForKey:(NSString *)key {
+    [self removeMemoryObjectForKey:key];
 }
 - (void) removeImageForURL:(NSURL *)url {
     if (url == nil || [url isEqual:[NSNull null]]) {
